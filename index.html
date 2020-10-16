@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Polárbasz</title>
+<script src="jquery-3.2.1.min.js"></script>
+<script src="polarmagic.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="root">
+
+    <canvas id="polarcanvas"></canvas>
+
+	<div id="controlFlex">
+
+		<div>
+			<div class="slideContainer" id="windHorContainer">
+			  <input type="range" min="0" max="100" value="50" class="slider" id="windHorSlider" oninput="updateHorWind()", onchange="updateHorWind()">
+			</div>
+			<div class="valueDisplay" id="windHorValue">0 m/s | 0 km/h</div>
+			<div id="controlBox">
+				<label><input type="checkbox" class="gsChkBkx" id="stallSpdChkBox"> Stall</label> |
+				<label><input type="checkbox" class="gsChkBkx" id="minSinkChkBox"> MinSink</label> |
+				<label><input type="checkbox" class="gsChkBkx" id="trimSpdChkBox"> Trim</label> |
+				<label><input type="checkbox" class="gsChkBkx" id="maxSpdChkBox"> MaxSpd</label>
+
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div>
+			<div class="slideContainer" id="windVertContainer">
+			  <input type="range" min="0" max="100" value="50" class="slider" id="windVertSlider" oninput="updateVertWind()", onchange="updateVertWind()">
+			</div>
+			<div class="valueDisplay" id="windVertValue">0 m/s | 0 km/h</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+
+</div>
+
+</body>
+</html>

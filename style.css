@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+*
+{
+	font-family: Tahoma, sans-serif;
+}
+
+html, body
+{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    height: 100%;
+}
+
+div.root {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	height: 100%;
+}
+
+div#canvasFlex
+{
+	flex: 1 1 auto;
+	-webkit-flex: 1 1 auto;
+}
+
+div#controlFlex
+{
+	width: 100%;
+	flex: 0 1 140px;
+	-webkit-flex: 0 1 140px;
+}
+
+div.slideContainer
+{
+    margin: 4px 8px 0 8px;
+}
+
+div#canvasContainer
+{
+	position: relative;
+}
+
+canvas#polarcanvas
+{
+    flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
+    overflow: hidden;
+}
+
+div#controlBox
+{
+	float: right;
+	font-size: 30px;
+}
+
+div#controlBox input
+{
+	height: 25px;
+	width: 25px;
+}
+
+div.clear
+{
+	clear: both;
+}
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    
+    appearance: none;
+    
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+input.slider
+{
+	width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    margin: 0;
+}
+
+div.valueDisplay
+{
+	font-size: 32px;
+	float: left;
+}
+
+div.valueDisplay, div#controlBox
+{
+    padding: 0 8px 0 8px;
+}
+
+div.listItem
+{
+	width: 100%;
+	clear: both;
+	margin-bottom: 2px;
+	border-bottom: 2px solid #000;
+	padding-bottom: 2px;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use webkit (Chrome, Opera, Safari, Edge) and moz (Firefox) to override default look) */ 
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
